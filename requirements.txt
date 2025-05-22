@@ -1,12 +1,15 @@
 # Core dependencies
 bleak>=0.21.0
-tkinter  # Usually comes with Python
 matplotlib>=3.7.0
 python-dateutil>=2.8.2
+asyncio
 
 # Supabase integration
 supabase>=2.0.0
 python-dotenv>=1.0.0
+
+# Database
+sqlite3  # Usually comes with Python
 
 # For building executable (optional)
 pyinstaller>=5.13.0
