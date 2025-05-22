@@ -6,10 +6,14 @@ import os
 from typing import Optional
 from datetime import datetime, date, timedelta
 import logging
+from dotenv import load_dotenv
 
-# Supabase credentials
-SUPABASE_URL = "https://xgoibwxiwfagcqjuslad.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhnb2lid3hpd2ZhZ2NxanVzbGFkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc5MjgzNDAsImV4cCI6MjA2MzUwNDM0MH0.75bE3UKyB5vt6hzfbfYa1MQmXU0hhORials6bV_V2bk"
+# Load environment variables
+load_dotenv()
+
+# Supabase credentials from environment
+SUPABASE_URL = os.getenv("SUPABASE_URL", "https://xgoibwxiwfagcqjuslad.supabase.co")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhnb2lid3hpd2ZhZ2NxanVzbGFkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc5MjgzNDAsImV4cCI6MjA2MzUwNDM0MH0.75bE3UKyB5vt6hzfbfYa1MQmXU0hhORials6bV_V2bk")
 
 # Create Supabase client
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
