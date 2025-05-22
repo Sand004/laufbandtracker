@@ -1,3 +1,4 @@
 @echo off
-start "" pythonw "F:\Sell everything\Laufband\treadmill_app.py"
-exit
+cd /d "F:\Sell everything\Laufband"
+python treadmill_app_modern.py
+pause
